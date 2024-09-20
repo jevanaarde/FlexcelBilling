@@ -12,6 +12,10 @@ components:
     name: label_3
     properties: {text: KMs}
     type: Label
+  - layout_properties: {grid_position: 'VNHHPV,UDXDFM ALOIKX,UIEMAT'}
+    name: label_4
+    properties: {text: AssignedToEmail}
+    type: Label
   - data_bindings:
     - {code: 'self.item[''ClientCode'']', property: text, writeback: true}
     layout_properties: {grid_position: 'VNHHPV,SSSWHF YWTTFT,VLIMXI'}
@@ -29,6 +33,12 @@ components:
     layout_properties: {full_width_row: false, grid_position: 'VNHHPV,SSSWHF ABLEWU,DXDKRO'}
     name: KMs
     properties: {enabled: true, type: number}
+    type: TextBox
+  - data_bindings:
+    - {code: 'self.item[''AssignedToEmail'']', property: text, writeback: true}
+    layout_properties: {grid_position: 'VNHHPV,SSSWHF UBSIAC,AYZUJF'}
+    name: text_box_1
+    properties: {}
     type: TextBox
   layout_properties: {slot: default}
   name: content_panel
