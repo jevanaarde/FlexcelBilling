@@ -3,7 +3,11 @@ unique_ids:
     standard-page.html: 4S6SETE4VO5NHZQNGIQEXQMBZQJ4QJ7W
     theme.css: HIRBI7WPDVBWUUS7WUCZLVT7IU4Z2FR7
   forms:
-    Form1: ZK7L3OFUKYWXOQOASKFZMIAAKXXGMFXC
+    frmClientEdit: '1726822173445652142998101.515'
+    frmLogin: '1726821106243914671932340.9009'
+    frmStartup: ZK7L3OFUKYWXOQOASKFZMIAAKXXGMFXC
+    frmStartup.RowTemplate1: '1726821342842690368750192.5844'
   modules: {}
   scripts: {}
-  server_modules: {}
+  server_modules:
+    ServerModule1: '1726821911043211439995755.97006'

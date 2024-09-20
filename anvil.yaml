@@ -1,4 +1,48 @@
 allow_embedding: false
+db_schema:
+  clients:
+    client: full
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: ClientCode
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: ClientName
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      name: KMs
+      type: number
+    - admin_ui: {order: 3, width: 200}
+      name: AssignedToEmail
+      type: string
+    server: full
+    title: Clients
+  users:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: email
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: enabled
+      type: bool
+    - admin_ui: {order: 2, width: 200}
+      name: last_login
+      type: datetime
+    - admin_ui: {order: 3, width: 200}
+      name: password_hash
+      type: string
+    - admin_ui: {order: 4, width: 200}
+      name: n_password_failures
+      type: number
+    - admin_ui: {order: 5, width: 200}
+      name: confirmed_email
+      type: bool
+    - admin_ui: {order: 6, width: 200}
+      name: remembered_logins
+      type: simpleObject
+    server: full
+    title: Users
 name: Rally App 1
 native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet" rel="preload" as="font" crossorigin="anonymous">'}
 package_name: Rally_App_1
@@ -7,5 +51,12 @@ runtime_options:
   server_spec: {base: python310-standard}
   server_version: python3-sandbox
   version: 2
-services: []
-startup_form: Form1
+services:
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/tables.yml
+- client_config: {allow_remember_me: true, allow_signup: false, confirm_email: true, enable_automatically: true, remember_me_days: 30, require_secure_passwords: true, use_email: true}
+  server_config: {user_table: users}
+  source: /runtime/services/anvil/users.yml
+startup: {module: frmLogin, type: form}
+startup_form: null
