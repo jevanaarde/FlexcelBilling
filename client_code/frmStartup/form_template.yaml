@@ -8,10 +8,10 @@ components:
     name: data_grid_1
     properties:
       columns:
-      - {data_key: ClientCode, id: KLDVNC, title: ClientCode}
-      - {data_key: ClientName, id: SOMTQZ, title: ClientName}
+      - {data_key: ClientCode, id: KLDVNC, title: Client Code}
+      - {data_key: ClientName, id: SOMTQZ, title: Client Name}
       - {data_key: KMs, id: UNZBOC, title: KMs}
-      - {data_key: AssignedToEmail, id: NTTTGX, title: AssignedToEmail}
+      - {data_key: AssignedToEmail, id: NTTTGX, title: Assigned To Email}
       role: null
     type: DataGrid
   - event_bindings: {click: add_client_click}

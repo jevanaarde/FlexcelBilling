@@ -18,5 +18,5 @@ import anvil.server
 #
 @anvil.server.callable
 def add_client(client_data):
-  if client_data.get('ClientCode') and client_data.get('ClientName') and client_data.get('KMs')
-    app_tables.clients.add_row(**client_data)
+  if client_data.get('ClientCode') and client_data.get('ClientName') and client_data.get('KMs') and client_data.get('AssignedToEmail'):
+      app_tables.clients.add_row(**client_data)

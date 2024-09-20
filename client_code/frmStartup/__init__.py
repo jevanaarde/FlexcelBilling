@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.users
-from ..ClientEdit import ClientEdit
+from ..frmClientEdit import frmClientEdit
 
 
 class frmStartup(frmStartupTemplate):
@@ -22,11 +22,11 @@ class frmStartup(frmStartupTemplate):
 
   def add_client_click(self, **event_args):
     item={}
-    editing_form = ClientEdit(item=item)
+    editing_form = frmClientEdit(item=item)
     
     if alert(content=editing_form,large=True):
       #add the client information to the Data table
-      anvil.server.call('frmClientEdit',item)
+      anvil.server.call('add_client',item)
       #refresh the data grid
       self.repeating_panel_1.items= app_tables.clients.search()
     

@@ -43,9 +43,10 @@ db_schema:
       type: simpleObject
     server: full
     title: Users
-name: Rally App 1
+metadata: {title: Flexcel Billing App}
+name: Flexcel Billing App
 native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet" rel="preload" as="font" crossorigin="anonymous">'}
-package_name: Rally_App_1
+package_name: Flexcel_Billing_App
 runtime_options:
   client_version: '3'
   server_spec: {base: python310-standard}
